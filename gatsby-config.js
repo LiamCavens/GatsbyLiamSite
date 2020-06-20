@@ -6,16 +6,16 @@
 
 module.exports = {
   siteMetadata: {
-    title: `The Project`,
-    titleTemplate: `%s · a starting point`,
+    title: `Liam Cavens`,
+    titleTemplate: `%s · Developer`,
     author: {
-      name: `Morten Rand-Hendriksen`,
+      name: `Liam Cavens`,
       summary: `a ballroom dancer playing at being a developer.`,
     },
     description: `An opinionated starter for Gatsby`,
-    url: `https://something.or.other`,
+    url: `https://liamcavens.netlify.app/`,
     logo: `/logo.png`,
-    twitter: `mor10`,
+    twitter: `liamcavens`,
     menuLinks: [
       {
         name: `Home`,
