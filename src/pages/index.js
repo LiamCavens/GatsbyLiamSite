@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
         <Img
           className={style.headerImage}
           fluid={data.headerImage.childImageSharp.fluid}
-          alt="Robots"
+          alt="Liams"
         />
         <PageHeader className={style.heading}>
           Welcome to the Project
