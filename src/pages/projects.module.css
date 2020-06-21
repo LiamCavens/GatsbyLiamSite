@@ -8,7 +8,7 @@
   font-size: 2.6rem;
 }
 
-.events {
+.projects {
   max-width: var(--content-w-regular);
   margin: 0 auto;
   padding: 1rem 2rem 4rem;
@@ -18,12 +18,12 @@
   gap: 2rem;
 }
 
-.events > div {
+.projects > div {
   padding: 2rem 3rem;
   background-color: white;
   border-radius: 2rem;
 }
 
-.events__list {
+.projects__list {
   list-style-type: none;
 }

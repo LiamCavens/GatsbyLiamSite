@@ -5,39 +5,39 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Event from "../components/event"
-import style from "./events.module.css"
+import style from "./projects.module.css"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Events"
+        title="Projects"
         description="Come join us at an event in the future!"
         image="/logo.png"
-        pathname="/events"
+        pathname="/projects"
         // Boolean indicating whether this is an article:
         // article
       />
       <section className={style.wrapper}>
         <Img fluid={data.headerImage.childImageSharp.fluid} alt="Liams" />
-        <h1 className={style.heading}>Events</h1>
+        <h1 className={style.heading}>Projects</h1>
         <div>
-          <p>We attend and present at many events. Come join us!</p>
+          <p>These are the current projects I have deployed!</p>
         </div>
       </section>
-      <section className={style.events}>
+      <section className={style.projects}>
         <div className={style.eventList}>
-          <h2 className={style.eventHeading}>Future events</h2>
-          <ul className={style.events__list}>
-            {data.futureEvents.nodes.map(event => (
+          <h2 className={style.eventHeading}>Future projects</h2>
+          <ul className={style.projects__list}>
+            {data.futureProjects.nodes.map(event => (
               <Event key={event.id} event={event} />
             ))}
           </ul>
         </div>
         <div className={style.eventList}>
-          <h2 className={style.eventHeading}>Past events</h2>
-          <ul className={style.events__list}>
-            {data.pastEvents.nodes.map(event => (
+          <h2 className={style.eventHeading}>Past projects</h2>
+          <ul className={style.projects__list}>
+            {data.pastProjects.nodes.map(event => (
               <Event key={event.id} event={event} />
             ))}
           </ul>
@@ -58,7 +58,7 @@ export const query = graphql`
         }
       }
     }
-    futureEvents: allEvent(
+    futureProjects: allEvent(
       filter: { collection: { eq: "future" } }
       sort: { fields: startDate, order: ASC }
     ) {
@@ -71,7 +71,7 @@ export const query = graphql`
         url
       }
     }
-    pastEvents: allEvent(
+    pastProjects: allEvent(
       filter: { collection: { eq: "past" } }
       sort: { fields: startDate, order: ASC }
     ) {
