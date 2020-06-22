@@ -3,12 +3,13 @@
   font-size: 84%;
   font-family: var(--highlight-font);
   text-align: center;
-  background-color: white;
+  background-color: #555;
 }
 
 .site_logo {
   margin: 1rem auto;
   max-width: 6rem;
+  border-radius: 50%;
 }
 
 .masthead_info {

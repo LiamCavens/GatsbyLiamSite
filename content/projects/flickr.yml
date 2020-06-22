@@ -1,2 +1,4 @@
 name: Flickr App
 features: FlickrAPI & Infinite Scroll
+imageName: FlickrScreen.jpg
+url: "https://liamcavens-flickr-app.netlify.app/"

@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO
         title="Projects"
-        description="Come join us at an event in the future!"
+        description="Projects I have completed."
         image="/logo.png"
         pathname="/projects"
         // Boolean indicating whether this is an article:
@@ -26,18 +26,10 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <section className={style.projects}>
-        <div className={style.eventList}>
-          <h2 className={style.eventHeading}>Future projects</h2>
+        <div className={style.projectList}>
+          <h2 className={style.projectHeading}>Projects</h2>
           <ul className={style.projects__list}>
-            {data.futureProjects.nodes.map(event => (
-              <Event key={event.id} event={event} />
-            ))}
-          </ul>
-        </div>
-        <div className={style.eventList}>
-          <h2 className={style.eventHeading}>Past projects</h2>
-          <ul className={style.projects__list}>
-            {data.pastProjects.nodes.map(event => (
+            {data.projects.nodes.map(event => (
               <Event key={event.id} event={event} />
             ))}
           </ul>
@@ -58,29 +50,12 @@ export const query = graphql`
         }
       }
     }
-    futureProjects: allEvent(
-      filter: { collection: { eq: "future" } }
-      sort: { fields: startDate, order: ASC }
-    ) {
+    projects: allProject(sort: { fields: name, order: ASC }) {
       nodes {
         id
         name
-        startDate
-        endDate
-        location
-        url
-      }
-    }
-    pastProjects: allEvent(
-      filter: { collection: { eq: "past" } }
-      sort: { fields: startDate, order: ASC }
-    ) {
-      nodes {
-        id
-        name
-        startDate
-        endDate
-        location
+        features
+        imageName
         url
       }
     }

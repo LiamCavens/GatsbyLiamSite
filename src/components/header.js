@@ -10,7 +10,7 @@ const Header = ({ siteTitle, siteDescription, menuLinks }) => (
     <div className={style.masthead_info}>
       <Link to="/">
         <img
-          src="/logo.svg"
+          src="/images/LiamCartoon.jpg"
           width="366"
           height="374"
           alt={siteTitle}

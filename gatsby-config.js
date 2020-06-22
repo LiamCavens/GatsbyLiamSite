@@ -10,7 +10,7 @@ module.exports = {
     titleTemplate: `%s · Developer`,
     author: {
       name: `Liam Cavens`,
-      summary: `a ballroom dancer playing at being a developer.`,
+      summary: `Software Developer`,
     },
     description: `An opinionated starter for Gatsby`,
     url: `https://liamcavens.netlify.app/`,
