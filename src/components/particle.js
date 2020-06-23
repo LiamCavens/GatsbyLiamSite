@@ -1,4 +1,4 @@
-export class Firework {
+export default class Particle {
   constructor(x, y, hue, ctx) {
     this.ctx = ctx
     this.x = x
@@ -10,18 +10,15 @@ export class Firework {
       this.coordinates.push([this.x, this.y])
     }
     // set a random angle in all possible directions, in radians
-    this.angle = random(0, Math.PI * 2)
-    this.speed = random(1, 10)
+    this.angle = this.random(0, Math.PI * 2)
+    this.speed = this.random(1, 10)
     // friction will slow the particle down
     this.friction = 0.95
     // gravity will be applied and pull the particle down
     this.gravity = 1
     // set the hue to a random number +-50 of the overall hue variable
-    this.hue = random(hue - 50, hue + 50)
-    this.brightness = random(50, 80)
-    this.alpha = 1
-    // set how fast the particle fades out
-    this.decay = random(0.015, 0.03)
+    this.hue = this.random(hue - 50, hue + 50)
+    this.brightness = this.random(50, 80)
   }
 
   update(index) {
@@ -34,16 +31,9 @@ export class Firework {
     // apply velocity
     this.x += Math.cos(this.angle) * this.speed
     this.y += Math.sin(this.angle) * this.speed + this.gravity
-    // fade out the particle
-    this.alpha -= this.decay
-
-    // remove the particle once the alpha is low enough, based on the passed in index
-    if (this.alpha <= this.decay) {
-      particles.splice(index, 1)
-    }
   }
 
-  draw() {
+  draw(ctx) {
     ctx.beginPath()
     ctx.moveTo(
       this.coordinates[this.coordinates.length - 1][0],
