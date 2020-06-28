@@ -22,10 +22,6 @@ module.exports = {
         link: `/`,
       },
       {
-        name: `Articles`,
-        link: `/articles`,
-      },
-      {
         name: `About`,
         link: `/about`,
       },
@@ -60,13 +56,6 @@ module.exports = {
       resolve: `gatsby-transformer-yaml`,
       options: {
         typeName: `Event`, // a fixed string
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `articles`,
-        path: `${__dirname}/content/articles/`,
       },
     },
     {

@@ -18,7 +18,7 @@ export default class Firework {
     this.coordinateCount = 3
     // populate initial coordinate collection with the current coordinates
     while (this.coordinateCount--) {
-      this.coordinates.push([this.x, this.y])
+      this.coordinates.push([this.tx, this.ty])
     }
     this.angle = Math.atan2(ty - sy, tx - sx)
     this.speed = 2
@@ -28,12 +28,11 @@ export default class Firework {
     this.targetRadius = 1
   }
 
-  update(index) {
+  update() {
     // remove last item in coordinates array
-    console.log("fireworks update works")
     this.coordinates.pop()
     // add current coordinates to the start of the array
-    this.coordinates.unshift([this.x, this.y])
+    this.coordinates.unshift([this.tx, this.ty])
 
     // cycle the circle target indicator radius
     if (this.targetRadius < 8) {
@@ -55,10 +54,10 @@ export default class Firework {
       this.x + vx,
       this.y + vy
     )
-
+    // IT FUCKS UP HERE
     // if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
     if (this.distanceTraveled >= this.distanceToTarget) {
-      this.createParticles(this.tx, this.ty, this.ctx)
+      this.createParticles(this.tx, this.ty)
       // remove the firework, use the index passed into the update function to determine which to remove
       //   this.fireworks.splice(index, 1)
     } else {
@@ -90,6 +89,7 @@ export default class Firework {
     while (particleCount--) {
       this.particles.push(new Particle(x, y))
     }
+    console.log(this.particles)
   }
 
   calculateDistance(p1x, p1y, p2x, p2y) {

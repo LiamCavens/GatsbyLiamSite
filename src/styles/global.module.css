@@ -1,6 +1,6 @@
 :root {
   /* Fonts */
-  --primary-font: "Amstelvar", serif;
+  --primary-font: "Raleway", serif;
   --highlight-font: "Recursive", sans-serif;
 
   /* Colours */
@@ -9,9 +9,9 @@
   --mod-light: 90%;
   --mod-medium: 50%;
   --mod-dark: 20%;
-  --main-bg-light: hsl(183, 42%, var(--mod-light));
-  --main-bg-medium: hsl(183, 42%, var(--mod-medium));
-  --main-bg-dark: hsl(183, 42%, var(--mod-dark));
+  --main-bg-light: hsl(000, 0%, var(--mod-light));
+  --main-bg-medium: hsl(0, 0%, var(--mod-medium));
+  --main-bg-dark: hsl(0, 0%, var(--mod-dark));
 
   /* Sizes and widths */
   --content-w-wide: 80rem;

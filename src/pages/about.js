@@ -26,16 +26,17 @@ const AboutPage = ({ data }) => {
           </figure>
 
           <p>
-            This site was built with Gatsby and patience. Learning Gatsby
-            requires taking the time to fully understand and embrace the
-            principles of React <em>and</em> static site generators.
+            I am a self-motivated and driven software developer, I pursued
+            software development after being introduced to coding in December
+            2017. I enlisted into <a href="https://codeclan.com/">CodeClan</a>.
+            The course has predominantly given me exposure to JavaScript, Java
+            and Ruby and sparked a keen passion for every day learning and
+            challenges.
           </p>
           <p>
-            On a macro level, Gatsby combines the best parts from CMSes
-            (templates and object-orientation) with the best parts of React
-            (components) and the best parts of the Old (dare I say "Classic?")
-            Web (DWTs and static sites) to create performant accessible and
-            robust websites for today and for the future.
+            Software development has focused my passion for problem solving and
+            overcoming user/customer problems as well as writing clean, robust
+            and maintainable code.
           </p>
         </div>
       </section>
